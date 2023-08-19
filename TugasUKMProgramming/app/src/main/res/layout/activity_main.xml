@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/gray2"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/purple"
+        android:paddingTop="10dp"
+        >
+        <ImageView
+            android:id="@+id/iv_github"
+            android:layout_marginLeft="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_icon_github"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_github"
+            android:text="Github Users"
+            android:padding="7dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/blackradius"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_link"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="25dp"
+        android:orientation="vertical"
+        >
+
+        <SearchView
+            android:id="@+id/sv_search"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:closeIcon="@drawable/ic_clear"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            android:searchHintIcon="@null"
+            android:searchIcon="@null"
+            android:background="@drawable/whiteradius"
+            android:layout_centerHorizontal="true"
+            />
+        <ScrollView
+            android:id="@+id/sv_search1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sv_search"
+            android:scrollbars="none"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sv_search"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+
+                >
+                <RelativeLayout
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profil1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/pic_1"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_nama1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_profil1"
+                        android:layout_marginLeft="16dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_namauser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gojo Satoru"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:id="@+id/tv_lokasi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jakarta, Indonesia"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_panah2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_rightarrow"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/userlist" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+

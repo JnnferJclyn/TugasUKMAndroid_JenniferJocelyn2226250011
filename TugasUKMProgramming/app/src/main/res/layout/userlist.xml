@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_profil"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/pic_1"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_profil"
+        android:layout_marginLeft="16dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_namauser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gojo Satoru"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/tv_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jakarta, Indonesia"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_rightarrow"
+        android:layout_centerVertical="true"
+        />
+
+
+</RelativeLayout>
